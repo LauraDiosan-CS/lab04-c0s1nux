@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    cout << "-------------------------------------------------------------\n";
     cout << "Starting the app!\n";
     testRepository();
     cout << "App is still WIP! ( Only Live requirements are met! )\n";
