@@ -147,15 +147,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="console.cpp" />
     <ClCompile Include="problemLab4.cpp" />
     <ClCompile Include="projectObject.cpp" />
     <ClCompile Include="repositoryArray.cpp" />
     <ClCompile Include="repositoryTests.cpp" />
+    <ClCompile Include="service.cpp" />
+    <ClCompile Include="serviceTests.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="console.h" />
     <ClInclude Include="projectObjectHeader.h" />
     <ClInclude Include="repositoryArray.h" />
     <ClInclude Include="repositoryTests.h" />
+    <ClInclude Include="service.h" />
+    <ClInclude Include="serviceTests.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

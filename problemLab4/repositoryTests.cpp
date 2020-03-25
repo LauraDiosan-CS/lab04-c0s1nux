@@ -46,6 +46,5 @@ void testRepository() {
 	delete[]a;
 	cout << "Success!\n";
 	cout << "-------------------------------------------------------------\n";
-	cout << "Tests finished successfully!\n";
-	cout << "-------------------------------------------------------------\n";
+	cout << "Repository tests finished successfully!\n";
 }

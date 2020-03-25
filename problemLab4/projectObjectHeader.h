@@ -12,7 +12,7 @@ public:
 	char* getPath();
 	int getBranches();
 	int getCommits();
-	void setPath(char*);
+	void setPath(const char*);
 	void setBranches(int);
 	void setCommits(int);
 	~Project();

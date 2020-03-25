@@ -1,2 +1,3 @@
-﻿  problemLab4.cpp
+﻿  serviceTests.cpp
+C:\Users\Doru\source\repos\problemLab4\problemLab4\serviceTests.cpp(35,63): warning C4102: 'https': unreferenced label
   problemLab4.vcxproj -> C:\Users\Doru\source\repos\problemLab4\x64\Debug\problemLab4.exe
