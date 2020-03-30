@@ -1,15 +1,31 @@
 #include <iostream>
 #include "repositoryTests.h"
 #include "serviceTests.h"
+#include "windows.h" 
+#include "console.h"
+#include "projectTestsHeader.h"
+
 using namespace std;
 
 int main()
 {
-    cout << "-------------------------------------------------------------\n";
-    cout << "Starting the app!\n";
+    cout << "Testing the app!\n";
+    Sleep(4000);
+    system("CLS");
+    creationProjectTest();
+    Sleep(4000);
+    system("CLS");
     testRepository();
+    Sleep(4000);
+    system("CLS");
     serviceTests();
-    cout << "App is still WIP! ( Only Live requirements are met! )\n";
-    cout << "-------------------------------------------------------------\n";
+    Sleep(4000);
+    system("CLS");
+    cout << "All tests passed! Running the app!\n";
+    cout << "Clearing the screen...\n";
+    Sleep(5000);
+    system("CLS");
+    Console console;
+    console.runApplication();
     return 0;
 }

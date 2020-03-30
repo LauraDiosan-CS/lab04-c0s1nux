@@ -36,6 +36,9 @@
     <ClCompile Include="serviceTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="projectTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="projectObjectHeader.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="serviceTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectTestsHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

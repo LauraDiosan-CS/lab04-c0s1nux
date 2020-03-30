@@ -23,12 +23,12 @@ void RepositoryArray::delElem(Project p) {
 	size--;
 }
 
-void RepositoryArray::updateElem(Project p, const char* newPath, int newBranches, int newCommits) {
+void RepositoryArray::updateElem(Project p, char* newPath, int newBranches, int newCommits) {
 	int i = findElem(p);
 	elem[i].setPath(newPath);
 	elem[i].setBranches(newBranches);
 	elem[i].setCommits(newCommits);
-
+	 
 }
 
 Project* RepositoryArray::getAll() {

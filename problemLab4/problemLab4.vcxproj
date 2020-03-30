@@ -150,6 +150,7 @@
     <ClCompile Include="console.cpp" />
     <ClCompile Include="problemLab4.cpp" />
     <ClCompile Include="projectObject.cpp" />
+    <ClCompile Include="projectTests.cpp" />
     <ClCompile Include="repositoryArray.cpp" />
     <ClCompile Include="repositoryTests.cpp" />
     <ClCompile Include="service.cpp" />
@@ -158,6 +159,7 @@
   <ItemGroup>
     <ClInclude Include="console.h" />
     <ClInclude Include="projectObjectHeader.h" />
+    <ClInclude Include="projectTestsHeader.h" />
     <ClInclude Include="repositoryArray.h" />
     <ClInclude Include="repositoryTests.h" />
     <ClInclude Include="service.h" />

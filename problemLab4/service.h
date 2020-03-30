@@ -2,12 +2,16 @@
 #include "repositoryArray.h"
 
 class Service {
+private:
+	RepositoryArray repository;
 public:
-	void addProject(RepositoryArray&, const char*, int, int);
-	void removeProject(RepositoryArray&, Project);
-	void updateProject(RepositoryArray&, Project, const char*, int, int);
-	Project* getAllProjects(RepositoryArray&);
-	int sizeOfList(RepositoryArray&);
-	void filterProjectsWithZeroBranchesOrCommits(RepositoryArray&);
-	void findAllProjectsWithAtLeastKBranchesAndLCommits(RepositoryArray&, int, int, Project[], int&);
+	Service();
+	void addProject(char*, int, int);
+	void removeProject(char*, int, int);
+	void updateProject(char*, int, int, char*, int, int);
+	Project* getAllProjects();
+	int sizeOfList();
+	void filterProjectsWithZeroBranchesOrCommits();
+	void findAllProjectsWithAtLeastKBranchesAndLCommits(int, int, Project[], int&);
+	~Service();
 };

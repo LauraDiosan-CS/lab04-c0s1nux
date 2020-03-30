@@ -33,7 +33,7 @@ int Project::getCommits() {
 	return commits;
 }
 
-void Project::setPath(const char* n) {
+void Project::setPath(char* n) {
 	if (path) delete[]path;
 	path = new char[strlen(n) + 1];
 	strcpy_s(path, strlen(n) + 1, n);

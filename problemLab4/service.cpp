@@ -1,41 +1,53 @@
 #include "Service.h"
 
-void Service::addProject(RepositoryArray& repo, const char* path, int branches, int commits) {
+Service::Service() {
+	Project projectOne("yo", 1, 2), projectTwo("yo dude", 2, 3), projectThree("sup", 3, 4), projectFour("no u", 4, 5);
+	repository.addElem(projectOne);
+	repository.addElem(projectTwo);
+	repository.addElem(projectThree);
+	repository.addElem(projectFour);
+}
+
+void Service::addProject(char* path, int branches, int commits) {
 	Project newProject(path, branches, commits);
-	repo.addElem(newProject);
+	repository.addElem(newProject);
 }
 
-void Service::removeProject(RepositoryArray& repo, Project projectWeAreRemoving) {
-	repo.delElem(projectWeAreRemoving);
+void Service::removeProject(char* path, int branches, int commits) {
+	Project projectWeAreRemoving(path, branches, commits);
+	repository.delElem(projectWeAreRemoving);
 }
 
-void Service::updateProject(RepositoryArray& repo, Project projectWeAreUpdating, const char* newPath, int newBranches, int newCommits) {
-	repo.findElem(projectWeAreUpdating);
-	repo.updateElem(projectWeAreUpdating, newPath, newBranches, newCommits);
+void Service::updateProject(char* pathWeAreUpdating, int branchesWeAreUpdating, int commitsWeAreUpdating, char* newPath, int newBranches, int newCommits) {
+	Project projectWeAreUpdating(pathWeAreUpdating, branchesWeAreUpdating, commitsWeAreUpdating);
+	repository.updateElem(projectWeAreUpdating, newPath, newBranches, newCommits);
 }
 
-Project* Service::getAllProjects(RepositoryArray& repo) {
-	return repo.getAll();
+Project* Service::getAllProjects() {
+	return repository.getAll();
 }
 
-void Service::filterProjectsWithZeroBranchesOrCommits(RepositoryArray& repo) {
-	for (int i = 0; i <= repo.dim(); i++)
+void Service::filterProjectsWithZeroBranchesOrCommits() {
+	for (int i = 0; i < repository.dim(); i++)
 	{
-		Project currentProject = repo.getItemFromPos(i);
+		Project currentProject = repository.getItemFromPos(i);
 		if (currentProject.getBranches() == 0 || currentProject.getCommits() == 0)
-			repo.delElem(currentProject);
+			repository.delElem(currentProject);
 	}
 }
 
-int Service::sizeOfList(RepositoryArray& repo) {
-	return repo.dim();
+int Service::sizeOfList() {
+	return repository.dim();
 }
 
-void Service::findAllProjectsWithAtLeastKBranchesAndLCommits(RepositoryArray& repo, int k, int l, Project goodList[], int &m) {
-	for (int i = 0; i <= repo.dim(); i++)
+void Service::findAllProjectsWithAtLeastKBranchesAndLCommits(int k, int l, Project goodList[], int &m) {
+	for (int i = 0; i < repository.dim(); i++)
 	{
-		Project currentProject = repo.getItemFromPos(i);
+		Project currentProject = repository.getItemFromPos(i);
 		if (currentProject.getBranches() >= k && currentProject.getCommits() >= l)
 			goodList[m++] = currentProject;
 	}
+}
+
+Service::~Service() {
 }
